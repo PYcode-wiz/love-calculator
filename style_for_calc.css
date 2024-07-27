@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 1000px;
+    background-image: url(/Frontend/assets/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    overflow: hidden;
+    color: #f46fa8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 1899px;
+    background-image: url(/Frontend/assets/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    overflow: hidden;
+    color: #f46fa8;
+}
+
+.container {
+    width: 75%;
+    height: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 39, 133, 0.806);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: floating 3s infinite ease-in-out;
+    z-index: 1;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -47%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ff1a4d;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+label {
+    font-size: 24px;
+    color: #ff006f;
+    position: relative;
+    left: 10%;
+    top: 5%;
+}
+
+input {
+    width: 70vw;
+    height: 5vh;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 16px;
+    background-color: #ffb3cc5c;
+    box-shadow: 0 8px 28px 0 rgba(178, 57, 125, 0.708);
+    backdrop-filter: blur(4px);
+    outline: none;
+    border: none;
+    top: 8%;
+    left: 2%;
+    font-size: 18px;
+}
+
+button {
+    width: 40vw;
+    height: 7vh;
+    font-size: 20px;
+    position: relative;
+    top: 15%;
+    left: 22%;
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 2px 2px 7px #ff00a6;
+    background: #ff3f96;
+    color: #ffffff;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+#result {
+    position: relative;
+    top: 18%;
+    left: 12%;
+    font-size: 24px;
+    color: #340017;
+
+}
+
+.love img {
+    width: 45px;
+    animation: bubble 7s linear infinite;
+}
+
+.love {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 750px;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(20vh);
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 2;
+    }
+
+    100% {
+        transform: translateY(-105vh);
+        opacity: 0;
+    }
+}
+
+.love img:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.love img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.love img:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.love img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.love img:nth-child(5) {
+    animation-delay: 4.5s;
+}
+
+.love img:nth-child(6) {
+    animation-delay: 7s;
+}
+
+#message-container {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(0%, -40%);
+    font-size: 30px;
+    color: #ff1a4d;
+}
+
+/* responsiveness */
+@media only screen and (min-width: 768px) {
+    body {
+        width: 100%;
+        height: 1099px;
+        background-image: url(/Frontend/assets/bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 25%;
+    }
+
+    .container {
+        width: 65%;
+        height: 48%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    label {
+        font-size: 28px;
+        position: relative;
+        left: 5%;
+        top: 2%;
+    }
+
+    input {
+        width: 60vw;
+        height: 6vh;
+        top: 5%;
+        left: 2%;
+        font-size: 18px;
+    }
+
+    button {
+        width: 25vw;
+        height: 7vh;
+        font-size: 24px;
+        position: relative;
+        top: 10%;
+        left: 31%;
+    }
+
+    #result {
+        position: relative;
+        top: 15%;
+        left: 20%;
+        font-size: 28px;
+    }
+
+    @keyframes bubble {
+        0% {
+            transform: translateY(30vh);
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 2;
+        }
+
+        100% {
+            transform: translateY(-105vh);
+            opacity: 0;
+        }
+    }
+
+    #message-container {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        transform: translate(0%, -40%);
+        font-size: 34px;
+        color: #000000;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        width: 100%;
+        height: 950px;
+        background-position: 25%;
+    }
+
+    .container {
+        width: 28%;
+        height: 62%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    label {
+        font-size: 28px;
+        position: relative;
+        left: 8%;
+        top: 1%;
+    }
+
+    input {
+        width: 25vw;
+        height: 7vh;
+        top: 5%;
+        left: 4%;
+        font-size: 18px;
+    }
+
+    button {
+        width: 15vw;
+        height: 7vh;
+        font-size: 24px;
+        position: relative;
+        top: 15%;
+        left: 23%;
+    }
+
+    #result {
+        position: relative;
+        top: 18%;
+        left: 20%;
+        font-size: 28px;
+    }
+
+    @keyframes bubble {
+        0% {
+            transform: translateY(30vh);
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 2;
+        }
+
+        100% {
+            transform: translateY(-105vh);
+            opacity: 0;
+        }
+    }
+
+    .crush{
+        position: relative;
+        top: 3%; 
+    }
+
+    #crush-name{
+        margin-top: 3%;
+    }
+
+    #message-container {
+        position: absolute;
+        top: 55%;
+        left: 70%;
+        width: 400px;
+        transform: translate(0%, -40%);
+        font-size: 34px;
+        color: #ffffffc6;
+    }
+}

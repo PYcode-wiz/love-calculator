@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Frontend/CSS/style_for_calc.css">
+    <title>Love Calculator</title>
+</head>
+
+<body bgcolor="#ffc4e4">
+    <div class="container">
+        <h1>Love Calculator</h1><br>
+        <label for="your">Your Name</label>
+        <input type="text" id="your-name" name="your" autocomplete="off" placeholder="Your Name..."
+            style="margin-bottom: 10%;"><br>
+        <label for="crush" class="crush">Crush's Name</label>
+        <input type="text" id="crush-name" name="crush" autocomplete="off" placeholder="Crush's Name..."><br>
+        <button type="button" onclick="calculate()"><b>Submit</b></button><br>
+        <div id="result"></div>
+    </div>
+
+    <div class="love">
+        <img src="/Frontend/assets/love.png">
+        <img src="/Frontend/assets/heart.png">
+        <img src="/Frontend/assets/love.png">
+        <img src="/Frontend/assets/heart.png">
+        <img src="/Frontend/assets/love.png">
+        <img src="/Frontend/assets/heart.png">
+    </div>
+
+    <div id="message-container"></div>
+
+    <!-- For quotes -->
+    <script>
+        const messages = [
+            "You can't blame gravity for falling in love!",
+            "Love is the flower you've got to let grow!",
+            "Love is like the wind, you can't see it but you can feel it!",
+            "Freeze! You've been arrested for being too cute!",
+            "And suddenly we see that love costs all we are and will ever be. Yet it is love which sets us free!",
+            "There is no remedy for love but to love more!"
+        ];
+        let currentIndex = 0;
+
+        function typeWriter(message, element, delay = 60) {
+            let charIndex = 0;
+            element.textContent = '';
+            function type() {
+                if (charIndex < message.length) {
+                    element.textContent += message.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, delay);
+                }
+            }
+            type();
+        }
+
+        function displayMessage() {
+            const messageContainer = document.getElementById('message-container');
+
+            messageContainer.innerHTML = '';
+
+            const newMessage = document.createElement('div');
+            messageContainer.appendChild(newMessage);
+            typeWriter(messages[currentIndex], newMessage);
+
+            currentIndex = (currentIndex + 1) % messages.length;
+        }
+
+        setInterval(displayMessage, 9000);
+
+        displayMessage();
+    </script>
+
+    <!-- Main Logic -->
+    <script>
+        function calculate() {
+            const yourName = document.getElementById('your-name').value.trim().toLowerCase();
+            const crushName = document.getElementById('crush-name').value.trim().toLowerCase();
+            const resultDiv = document.getElementById('result');
+
+
+            if (yourName === '' || crushName === '') {
+                resultDiv.textContent = 'Please enter both names.';
+                return;
+            }
+
+            if ((yourName === 'satyam' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'satyam')) {
+                resultDiv.textContent = 'Love Percentage: 99.9%';
+            }
+            else if ((yourName === 'satyam shrestha' && crushName === 'kriti pokhrel') || (yourName === 'kriti pokhrel' && crushName === 'satyam shrestha')) {
+                resultDiv.textContent = 'Love Percentage: 99.9%';
+            }
+            else if ((yourName === 'satyam shrestha' && crushName === 'kriti shrestha') || (yourName === 'kriti shrestha' && crushName === 'satyam shrestha')) {
+                resultDiv.textContent = 'Love Percentage: 99.9%';
+            }
+            else if ((yourName === 'shubeshya' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'shubeshya')) {
+                resultDiv.textContent = 'Love Percentage: 95.9%';
+            }
+            else if ((yourName === 'simran' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'simran')) {
+                resultDiv.textContent = 'Love Percentage: 92.9%';
+            } 
+            else if (yourName === 'kriti' || crushName === 'kriti') {
+                resultDiv.textContent = 'Love Percentage: 20%';
+            }
+            else if (yourName === 'kriti pokhrel' || crushName === 'kriti pokhrel') {
+                resultDiv.textContent = 'Love Percentage: 20%';
+            }
+            else {
+                const lovePercentage = Math.random() * 75;
+                resultDiv.textContent = `Love Percentage: ${lovePercentage.toFixed(1)}%`;
+            }
+        }
+    </script>
+</body>
+
+</html>
