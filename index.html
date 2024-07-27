@@ -85,28 +85,6 @@
                 resultDiv.textContent = 'Please enter both names.';
                 return;
             }
-
-            if ((yourName === 'satyam' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'satyam')) {
-                resultDiv.textContent = 'Love Percentage: 99.9%';
-            }
-            else if ((yourName === 'satyam shrestha' && crushName === 'kriti pokhrel') || (yourName === 'kriti pokhrel' && crushName === 'satyam shrestha')) {
-                resultDiv.textContent = 'Love Percentage: 99.9%';
-            }
-            else if ((yourName === 'satyam shrestha' && crushName === 'kriti shrestha') || (yourName === 'kriti shrestha' && crushName === 'satyam shrestha')) {
-                resultDiv.textContent = 'Love Percentage: 99.9%';
-            }
-            else if ((yourName === 'shubeshya' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'shubeshya')) {
-                resultDiv.textContent = 'Love Percentage: 95.9%';
-            }
-            else if ((yourName === 'simran' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'simran')) {
-                resultDiv.textContent = 'Love Percentage: 92.9%';
-            } 
-            else if (yourName === 'kriti' || crushName === 'kriti') {
-                resultDiv.textContent = 'Love Percentage: 20%';
-            }
-            else if (yourName === 'kriti pokhrel' || crushName === 'kriti pokhrel') {
-                resultDiv.textContent = 'Love Percentage: 20%';
-            }
             else {
                 const lovePercentage = Math.random() * 75;
                 resultDiv.textContent = `Love Percentage: ${lovePercentage.toFixed(1)}%`;
