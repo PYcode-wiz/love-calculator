@@ -85,6 +85,12 @@
                 resultDiv.textContent = 'Please enter both names.';
                 return;
             }
+            else if ((yourName === 'satyam' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'satyam')) {
+                resultDiv.textContent = 'Love Percentage: 99.9%';
+                
+            else if (yourName === 'kriti' || crushName === 'kriti') {
+                resultDiv.textContent = 'Love Percentage: 20%';
+            }
             else {
                 const lovePercentage = Math.random() * 75;
                 resultDiv.textContent = `Love Percentage: ${lovePercentage.toFixed(1)}%`;
