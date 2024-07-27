@@ -76,6 +76,7 @@
     <!-- Main Logic -->
     <script>
         function calculate() {
+            function calculate() {
             const yourName = document.getElementById('your-name').value.trim().toLowerCase();
             const crushName = document.getElementById('crush-name').value.trim().toLowerCase();
             const resultDiv = document.getElementById('result');
@@ -85,11 +86,15 @@
                 resultDiv.textContent = 'Please enter both names.';
                 return;
             }
-            else if ((yourName === 'satyam' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'satyam')) {
+
+            if ((yourName === 'satyam' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'satyam')) {
                 resultDiv.textContent = 'Love Percentage: 99.9%';
-            }    
-            else if (yourName === 'kriti' || crushName === 'kriti') {
-                resultDiv.textContent = 'Love Percentage: 20%';
+            }
+            else if ((yourName === 'shubeshya' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'shubeshya')) {
+                resultDiv.textContent = 'Love Percentage: 98.9%';
+            }
+            else if ((yourName === 'simran' && crushName === 'kriti') || (yourName === 'kriti' && crushName === 'simran')) {
+                resultDiv.textContent = 'Love Percentage: 98.5%';
             }
             else {
                 const lovePercentage = Math.random() * 75;
